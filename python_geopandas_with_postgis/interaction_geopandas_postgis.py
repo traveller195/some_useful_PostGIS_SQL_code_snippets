@@ -56,3 +56,42 @@ data_study_area.to_postgis('new_table_name', con, schema='target_schema_name', i
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 con.execute("CREATE TABLE schema_name.table_name AS SELECT * FROM schema_name.table_name_2 LIMIT 10;")
+
+
+
+
+# Parameters for .to_postgis()
+#
+#    namestr
+#
+#        Name of the target table.
+#    consqlalchemy.engine.Connection or sqlalchemy.engine.Engine
+#
+#        Active connection to the PostGIS database.
+#    if_exists{‘fail’, ‘replace’, ‘append’}, default ‘fail’
+#
+#        How to behave if the table already exists:
+#
+#            fail: Raise a ValueError.
+#
+#           replace: Drop the table before inserting new values.
+#
+#            append: Insert new values to the existing table.
+#
+#    schemastring, optional
+#
+#        Specify the schema. If None, use default schema: ‘public’.
+#    indexbool, default False
+#
+#        Write DataFrame index as a column. Uses index_label as the column name in the table.
+#    index_labelstring or sequence, default None
+#
+#        Column label for index column(s). If None is given (default) and index is True, then the index names are used.
+#    chunksizeint, optional
+#
+#        Rows will be written in batches of this size at a time. By default, all rows will be written at once.
+#    dtypedict of column name to SQL type, default None
+#
+#        Specifying the datatype for columns. The keys should be the column names and the values should be the SQLAlchemy types.
+
+
