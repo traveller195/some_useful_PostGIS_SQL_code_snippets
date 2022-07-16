@@ -44,7 +44,7 @@ data_study_area = gpd.read_postgis('SELECT * FROM schema_name.table.name;', con,
 # ++++++++++++++++++++++ load data to PostGIS DB +++++++++++++++++
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
+data_study_area.to_postgis('new_table_name', con, schema='target_schema_name', if_exists='fail', index=False, index_label=None, chunksize=2000, dtype=None)
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # ++++++++++++++++++++++ execute in database  ++++++++++++++++++++
