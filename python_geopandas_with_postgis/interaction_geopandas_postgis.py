@@ -22,6 +22,8 @@ import numpy as np
 
 from sqlalchemy import create_engine
 
+# !!! for .to_postgis() - Note: you will need psycopg2-binary, sqlalchemy2, and geoalchemy2 installed. !!!
+
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # ++++++++++++++++++++++ database connection +++++++++++++++++++++
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
